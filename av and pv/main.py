@@ -1,5 +1,8 @@
-import time,active,passive
-print("✨ Welcome to the Active and passive voice practice ✨")
+import time,active,passive,shutil
+terminal_size = shutil.get_terminal_size(fallback=(80, 24))
+width = terminal_size.columns
+intro = "✨ Welcome to the Active and passive voice practice ✨"
+print(intro.center(width))
 time.sleep(2)
 print("Want to practice (yes or no)")
 y = input("Enter your answer (y or n):  ")
@@ -14,7 +17,8 @@ while y.lower() == "y":
   time.sleep(4)
   i = 1
   for key in active.qa_dict:
-    print(f"----------------Question {i} -------------------\n")
+    q = f"---------Question {i}---------"
+    print(q.center(width))
     print(f"{key}")
     ans=input("Enter your answer(q to quit):")
     if ans.lower() == active.qa_dict[key].lower():
@@ -34,7 +38,8 @@ while y.lower() == "y":
     time.sleep(4)
     i = 1
     for key in passive.reversed_qa_dict:
-        print(f"----------------Question {i} -------------------\n")
+        q = f"---------Question {i}---------"
+        print(q.center(width))
         print(f"{key}")
         ans=input("Enter your answer(q to quit):")
         if ans.lower() == passive.reversed_qa_dict[key].lower():
