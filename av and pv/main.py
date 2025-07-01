@@ -28,7 +28,6 @@ while y.lower() == "y":
     elif ans.lower() == "q":
         print(f"The number of correct answers: {correct}")
         print(f"The number of wrong answers: {wrong}")
-        print("💐Thank you for using💐".center(width))
         break
     else:
         print("❌Wrong answer❌\n")
@@ -54,7 +53,6 @@ while y.lower() == "y":
         elif ans.lower() == "q":
             print(f"The number of correct answers: {correct}")
             print(f"The number of wrong answers: {wrong}")
-            print("💐Thank you for using💐".center(width))
             break
         else:
             print("❌Wrong answer❌\n")
