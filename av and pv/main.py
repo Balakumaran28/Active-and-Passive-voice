@@ -7,8 +7,8 @@ time.sleep(2)
 print("Want to practice (yes or no)")
 y = input("Enter your answer (y or n):  ")
 while y.lower() == "y": 
- print("     1.Active","     2.Passive",sep="\n")
- choice = int(input("Enter the choice (1 or 2) :  "))
+ print("\n     1.Active","     2.Passive",sep="\n")
+ choice = int(input("\nEnter the choice (1 or 2) :  "))
  if choice == 1:
   print('''Instructions:
          1.The questions are given in active voice
@@ -26,8 +26,8 @@ while y.lower() == "y":
         print("🔥Correct answer🔥\n")
         correct+=1
     elif ans.lower() == "q":
-        print(f"The number of correct answers: {correct}")
-        print(f"The number of wrong answers: {wrong}")
+        print(f"\n -->The number of correct answers: {correct}")
+        print(f"\n -->The number of wrong answers: {wrong}")
         break
     else:
         print("❌Wrong answer❌\n")
@@ -51,8 +51,8 @@ while y.lower() == "y":
             print("🔥Correct answer🔥\n")
             correct+=1
         elif ans.lower() == "q":
-            print(f"The number of correct answers: {correct}")
-            print(f"The number of wrong answers: {wrong}")
+            print(f"\n -->The number of correct answers: {correct}")
+            print(f"\n -->The number of wrong answers: {wrong}")
             break
         else:
             print("❌Wrong answer❌\n")
@@ -61,5 +61,5 @@ while y.lower() == "y":
         i +=1
  else:
     print("!!SORRY!!".center(width),"Kindly enter correct choice",sep="\n")
- y = input("Want to practice more (enter y-->yes  or  anything -->no): ")
-print("💐Thank you for using💐".center(width))
+ y = input("\nWant to practice more (enter y-->yes  or  anything -->no): ")
+print("💐💐💐 Thank you for using 💐💐💐".center(width))
