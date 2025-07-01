@@ -15,6 +15,8 @@ while y.lower() == "y":
          2.You are asked to enter the correct passive voice''')
   time.sleep(4)
   i = 1
+  correct = 0
+  wrong = 0
   for key in active.qa_dict:
     q = f"Question {i}"
     print(q.center(width))
@@ -22,12 +24,16 @@ while y.lower() == "y":
     ans=input("Enter your answer(q to quit):")
     if ans.lower() == active.qa_dict[key].lower():
         print("🔥Correct answer🔥\n")
+        correct+=1
     elif ans.lower() == "q":
-        print("💐Thank you for using💐\n")
+        print(f"The number of correct answers: {correct}")
+        print(f"The number of wrong answers: {wrong}")
+        print("💐Thank you for using💐".center(width))
         break
     else:
         print("❌Wrong answer❌\n")
         print(f"The correct answer is : {active.qa_dict[key]}\n")
+        wrong +=1
     i +=1
  elif choice == 2:
     print('''Instructions:
@@ -35,6 +41,8 @@ while y.lower() == "y":
          2.You are asked to enter the correct active voice''')
     time.sleep(4)
     i = 1
+    correct = 0
+    wrong = 0
     for key in passive.reversed_qa_dict:
         q = f"Question {i}"
         print(q.center(width))
@@ -42,14 +50,18 @@ while y.lower() == "y":
         ans=input("Enter your answer(q to quit):")
         if ans.lower() == passive.reversed_qa_dict[key].lower():
             print("🔥Correct answer🔥\n")
+            correct+=1
         elif ans.lower() == "q":
-            print("💐Thank you for using💐\n")
+            print(f"The number of correct answers: {correct}")
+            print(f"The number of wrong answers: {wrong}")
+            print("💐Thank you for using💐".center(width))
             break
         else:
             print("❌Wrong answer❌\n")
             print(f"The correct answer is : {passive.reversed_qa_dict[key]}\n")
+            wrong +=1
         i +=1
  else:
-    print("!!SORRY!!","Kindly enter correct choice",sep="\n")
+    print("!!SORRY!!".center(width),"Kindly enter correct choice",sep="\n")
  y = input("Want to practice more (enter y-->yes  or  anything -->no): ")
-print("💐Thank you for using💐\n")
+print("💐Thank you for using💐".center(width))
