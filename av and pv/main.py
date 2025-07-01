@@ -10,14 +10,13 @@ while y.lower() == "y":
  print("     1.Active","     2.Passive",sep="\n")
  choice = int(input("Enter the choice (1 or 2) :  "))
  if choice == 1:
-  time.sleep(2)
   print('''Instructions:
          1.The questions are given in active voice
          2.You are asked to enter the correct passive voice''')
   time.sleep(4)
   i = 1
   for key in active.qa_dict:
-    q = f"---------Question {i}---------"
+    q = f"Question {i}"
     print(q.center(width))
     print(f"{key}")
     ans=input("Enter your answer(q to quit):")
@@ -31,14 +30,13 @@ while y.lower() == "y":
         print(f"The correct answer is : {active.qa_dict[key]}\n")
     i +=1
  elif choice == 2:
-    time.sleep(2)
     print('''Instructions:
          1.The questions are given in passive voice
          2.You are asked to enter the correct active voice''')
     time.sleep(4)
     i = 1
     for key in passive.reversed_qa_dict:
-        q = f"---------Question {i}---------"
+        q = f"Question {i}"
         print(q.center(width))
         print(f"{key}")
         ans=input("Enter your answer(q to quit):")
@@ -53,5 +51,5 @@ while y.lower() == "y":
         i +=1
  else:
     print("!!SORRY!!","Kindly enter correct choice",sep="\n")
- y = input("Want to practice more (yes - y or no - n): ")
+ y = input("Want to practice more (enter y-->yes  or  anything -->no): ")
 print("💐Thank you for using💐\n")
